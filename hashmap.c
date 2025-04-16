@@ -38,10 +38,23 @@ int is_equal(void* key1, void* key2){
     return 0;
 }
 
-
 void insertMap(HashMap * map, char * key, void * value) {
+    long pos = hash(key, map->capacity);
+    Pair * parActual = map->buckets[pos];
 
-
+    while (parActual != NULL){
+        pos = (pos + 1) % map->capacity;
+    }
+    if (map->buckets[pos] == NULL){
+        map->buckets[pos] = createPair(strdup(key), value);
+    }
+    else{
+        map->buckets[pos]->key = strdup(key);
+        map->buckets[pos]->value = strdup(value);
+    }
+    if (map->capacity / map->size >= 0.7){
+        enlarge(map);
+    }
 }
 
 void enlarge(HashMap * map) {
@@ -61,9 +74,28 @@ void eraseMap(HashMap * map,  char * key) {
 
 }
 
+/* 3.- Implemente la función Pair * searchMap(HashMap * map,  char * key), la cual retorna el **Pair** asociado a la clave ingresada. 
+Recuerde que para buscar el par debe:
+
+a - Usar la función hash para obtener la posición donde puede encontrarse el par con la clave
+
+b - Si la clave no se encuentra avance hasta encontrarla (*método de resolución de colisiones*)
+
+c - Si llega a una casilla nula, retorne NULL inmediatamente (no siga avanzando, la clave no está)
+
+Recuerde actualizar el índice current a la posición encontrada.
+Recuerde que el arreglo es **circular**.
+
+    Pair * searchMap(HashMap * map,  char * key) {
+
+
+        return NULL;
+    }
+
+*/
+
 Pair * searchMap(HashMap * map,  char * key) {   
-
-
+    
     return NULL;
 }
 
