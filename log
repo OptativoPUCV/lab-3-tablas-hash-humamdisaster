@@ -90,3 +90,9 @@ hashmap.c:44:12: error: 'parActual' undeclared (first use in this function)
             ^~~~~~~~~
 hashmap.c:44:12: note: each undeclared identifier is reported only once for each function it appears in
 a599ba5
+vi., 18 de abr. de 2025  1:22:28: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  13|1
+total_score: 50/70
+3d87452
