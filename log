@@ -11,3 +11,9 @@ ju., 17 de abr. de 2025 23:07:37:
  1 file changed, 21 insertions(+), 5 deletions(-)
  tests:  0|0
 864aba8
+ju., 17 de abr. de 2025 23:19:04: 
+ hashmap.c | 47 ++++++++++++++++++++++++-----------------------
+ 1 file changed, 24 insertions(+), 23 deletions(-)
+Compilation failed
+./test.sh: line 32: gcc: command not found
+ed552fa
