@@ -52,7 +52,7 @@ void insertMap(HashMap * map, char * key, void * value) {
         map->buckets[pos]->key = strdup(key);
         map->buckets[pos]->value = strdup(value);
     }
-    if (map->capacity / map->size >= 0.7){
+    if ((float)map->size / map->capacity >= 0.7){
         enlarge(map);
     }
 }
@@ -65,8 +65,8 @@ void enlarge(HashMap * map) {
     map->capacity = map->capacity * 2;
     map->buckets = (Pair **) calloc(map->capacity, sizeof(Pair *));
     map->size = 0;
-    
-    for (long k = 0; k < oldSize; k++){
+
+    for (long k = 0; k < oldCapacity; k++){
         if (oldBuckets[k] != NULL){
             insertMap(map, oldBuckets[k]->key, oldBuckets[k]->value);
             free(oldBuckets[k]);
