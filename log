@@ -6,3 +6,8 @@ ju., 17 de abr. de 2025 23:07:12:
 Compilation failed
 ./test.sh: line 32: gcc: command not found
 71152f7
+ju., 17 de abr. de 2025 23:07:37: 
+ hashmap.c | 26 +++++++++++++++++++++-----
+ 1 file changed, 21 insertions(+), 5 deletions(-)
+ tests:  0|0
+864aba8
