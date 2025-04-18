@@ -55,9 +55,7 @@ void insertMap(HashMap * map, char * key, void * value) {
         map->buckets[pos]->key = strdup(key);
         map->buckets[pos]->value = strdup(value);
     }
-    if ((float)map->size / map->capacity >= 0.7){
-        enlarge(map);
-    }
+    
 }
 
 void enlarge(HashMap * map) {
