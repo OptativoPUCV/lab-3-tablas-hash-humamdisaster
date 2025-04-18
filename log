@@ -79,3 +79,14 @@ vi., 18 de abr. de 2025  1:12:26:
  tests:  13|1
 total_score: 50/70
 3e2985d
+vi., 18 de abr. de 2025  1:22:04: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:44:12: error: 'parActual' undeclared (first use in this function)
+     while (parActual != NULL && parActual->key != NULL){
+            ^~~~~~~~~
+hashmap.c:44:12: note: each undeclared identifier is reported only once for each function it appears in
+a599ba5
